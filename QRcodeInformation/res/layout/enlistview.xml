@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/addresslist_item"
+    android:clickable="true"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/enlistview_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:clickable="false"
+        android:gravity="center_vertical"
+        android:textColor="#000"
+        android:textIsSelectable="true"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/enlistview_mm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/action_settings"
+        android:src="@drawable/submenu" />
+
+    <TextView
+        android:id="@+id/enlistview_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dip"
+        android:layout_toLeftOf="@id/enlistview_mm"
+        android:clickable="false"
+        android:gravity="center"
+        android:text="@string/listview_add"
+        android:textColor="#17cbeb"
+        android:textIsSelectable="true"
+        android:textSize="14sp" />
+
+</RelativeLayout>

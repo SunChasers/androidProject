@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center_vertical" >
+
+        <include layout="@layout/title" />
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/tital_btn_back"
+            android:contentDescription="@string/action_settings"
+            android:onClick="rightTop"
+            android:text="@string/back"
+            android:textColor="#fff"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbarStyle="outsideOverlay" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- android:layout_marginTop上偏移的值，dp表示像素与dip相同 -->
+
+            <RelativeLayout
+                android:id="@+id/rll_head"
+                android:layout_width="fill_parent"
+                android:layout_height="70dip"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/preference_first_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <!-- 头像TextView -->
+
+                <TextView
+                    android:id="@+id/add_contacter_textview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:text="@string/head"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/add_new_contacter_img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:scaleType="matrix"
+                    android:src="@drawable/submenu" />
+
+                <ImageView
+                    android:id="@+id/newhead_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/add_new_contacter_img1"
+                    android:contentDescription="@string/action_settings"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/psb" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/preference_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <!-- 姓名 -->
+
+                <TextView
+                    android:id="@+id/newname_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:text="@string/name"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/add_new_contacter_img3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:scaleType="matrix"
+                    android:src="@drawable/submenu" />
+
+                <TextView
+                    android:id="@+id/newname_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/add_new_contacter_img3"
+                    android:text="@string/notset"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/preference_last_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <!-- 电话 -->
+
+                <TextView
+                    android:id="@+id/newname_tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:text="@string/add_new_contacter_phone"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/add_new_contacter_img4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:scaleType="matrix"
+                    android:src="@drawable/submenu" />
+
+                <TextView
+                    android:id="@+id/newphone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/add_new_contacter_img4"
+                    android:text="@string/notset"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <!-- ************************************************************************ -->
+
+            <RelativeLayout
+                android:id="@+id/rll_QQ"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/preference_first_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <!-- QQ账号 -->
+
+                <TextView
+                    android:id="@+id/add_new_contacter_textview6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:text="@string/QQ"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/add_new_contacter_img5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:scaleType="matrix"
+                    android:src="@drawable/submenu" />
+
+                <TextView
+                    android:id="@+id/newQQ_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/add_new_contacter_img5"
+                    android:text="@string/Notset"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_weixin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/preference_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <!-- 微信号 -->
+
+                <TextView
+                    android:id="@+id/add_new_contacter_textview8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:text="@string/weixin"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/add_new_contacter_img6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:scaleType="matrix"
+                    android:src="@drawable/submenu" />
+
+                <TextView
+                    android:id="@+id/newweixin_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/add_new_contacter_img6"
+                    android:text="@string/Notset"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_microblog"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/preference_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <!-- 微博 -->
+
+                <TextView
+                    android:id="@+id/add_new_contacter_textview10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:text="@string/microblog"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/add_new_contacter_img7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:scaleType="matrix"
+                    android:src="@drawable/submenu" />
+
+                <TextView
+                    android:id="@+id/newmicroblog_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/add_new_contacter_img7"
+                    android:text="@string/Notset"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_mail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/preference_last_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <!-- 邮箱 -->
+
+                <TextView
+                    android:id="@+id/add_new_contacter_textview12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:text="@string/mailbox"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/add_new_contacter_img8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:scaleType="matrix"
+                    android:src="@drawable/submenu" />
+
+                <TextView
+                    android:id="@+id/newmail_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/add_new_contacter_img8"
+                    android:text="@string/Notset"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <!-- ************************************************************************ -->
+
+            <RelativeLayout
+                android:id="@+id/rll_job"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/preference_first_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <!-- 职业 -->
+
+                <TextView
+                    android:id="@+id/add_new_contacter_textview14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:text="@string/job"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/add_new_contacter_img9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:scaleType="matrix"
+                    android:src="@drawable/submenu" />
+
+                <TextView
+                    android:id="@+id/newjob_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/add_new_contacter_img9"
+                    android:text="@string/Notset"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_addresslistgroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/preference_last_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <!-- 通讯录组 -->
+
+                <TextView
+                    android:id="@+id/add_new_contacter_textview16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:text="@string/group"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/add_new_contacter_img10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:scaleType="matrix"
+                    android:src="@drawable/submenu" />
+
+                <TextView
+                    android:id="@+id/newaddresslistgroup_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/add_new_contacter_img10"
+                    android:text="@string/Notset"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <!-- *********************************************************************** -->
+
+            <RelativeLayout
+                android:id="@+id/rll_sex"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/preference_first_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <!-- 性别 -->
+
+                <TextView
+                    android:id="@+id/add_new_contacter_textview18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:text="@string/sex"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/add_new_contacter_img11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:scaleType="matrix"
+                    android:src="@drawable/submenu" />
+
+                <TextView
+                    android:id="@+id/newsex_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/add_new_contacter_img11"
+                    android:text="@string/Notset"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/preference_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <!-- address -->
+
+                <TextView
+                    android:id="@+id/add_new_contacter_textview20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:text="@string/address"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/add_new_contacter_img12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:scaleType="matrix"
+                    android:src="@drawable/submenu" />
+
+                <TextView
+                    android:id="@+id/newaddress_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/add_new_contacter_img12"
+                    android:text="@string/Notset"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rll_remarks"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/preference_last_item"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <!-- 备注 -->
+
+                <TextView
+                    android:id="@+id/add_new_contacter_textview22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:text="@string/remarks"
+                    android:textColor="#000"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/add_new_contacter_img13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:scaleType="matrix"
+                    android:src="@drawable/submenu" />
+
+                <TextView
+                    android:id="@+id/newremarks_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/add_new_contacter_img13"
+                    android:text="@string/Notset"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <!-- *********************************************************************** -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:clickable="true"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:id="@+id/savebtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/btn_style_red"
+                    android:gravity="center"
+                    android:onClick="exit"
+                    android:padding="4dp"
+                    android:text="@string/save"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

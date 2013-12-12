@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/addresslist_item"
+    android:clickable="true"
+    android:gravity="center_vertical">
+    <ImageView 
+        android:id="@+id/head_image"
+       android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center_vertical"
+        android:clickable="false"
+        android:contentDescription="@string/action_settings"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dip"
+        android:layout_toRightOf="@id/head_image"
+        android:gravity="center_vertical"
+        android:textColor="#000"
+        android:clickable="false"
+        android:textIsSelectable="true"
+        android:textSize="20sp" />
+    <ImageView
+        android:id="@+id/mm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="5dip"
+        android:layout_marginRight="14dip"
+        android:contentDescription="@string/action_settings"
+        android:src="@drawable/submenu"
+       />
+    
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+<!-- layout-weight——属性这个属性用于控制控件的大小，当LinearLayout布局是垂直布局的时候，它就控制高度的大小；当LinearLayout布局是水平布局的时候，它就控制宽度的大小
+                很重要的一点是，高度属性要设定为0，绝对不能设定为fill_parent，不然就不会成比例了！这是在布局是垂直布局时候的情况，水平时，则定义宽度属性为0！ -->
+    <android.support.v4.view.ViewPager
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/pager" />
+    <!--android:paddingTop属性  ——该布局顶部填充距离-->
+	<RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/title_bar"
+        android:paddingTop="5dp"
+        >
+        <!-- android:layout_alignParentBottom属性——贴紧父元素的下边缘 -->
+        <ImageView 
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:background="@drawable/tab_bottom"
+        	android:layout_alignParentBottom="true"
+        	android:contentDescription="@string/action_settings"
+        	android:id="@+id/bottom_image"
+            />
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:orientation="horizontal"
+        	android:id="@+id/tab_bar"
+            >
+            <!--引用样式资源来定义控件样式-->
+            <TextView 
+                style="@style/TabItem"
+                android:drawableTop="@drawable/tab_qrcode"
+                android:text="@string/QRCode"
+                />
+            <TextView 
+                style="@style/TabItem"
+                android:drawableTop="@drawable/tab_addresslist"
+                android:text="@string/addresslist"
+                />
+            <TextView 
+                style="@style/TabItem"
+                android:drawableTop="@drawable/tab_function"
+                android:text="@string/function"
+                />
+            <TextView 
+                style="@style/TabItem"
+                android:drawableTop="@drawable/tab_setting"
+                android:text="@string/setting"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
